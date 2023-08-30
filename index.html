@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SignUp Form</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Skranji:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Skranji:wght@400;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <main>
+    <div class="left-section section">
+      <div class="signup-img">
+        <img
+          src="https://images.unsplash.com/photo-1692297351816-9fa5d0483608?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80"
+          alt="">
+        <div class="signup-logo">
+          <img
+            src="https://cdn.statically.io/gh/TheOdinProject/curriculum/5f37d43908ef92499e95a9b90fc3cc291a95014c/html_css/project-sign-up-form/odin-lined.png"
+            alt="">
+          <span>Odin</span>
+        </div>
+      </div>
+    </div>
+    <div class="right-section section">
+      <div class="form-top">
+        <h1 class="title">This is not a real online service! You know you need something like this in your life to help
+          you relize your
+          deepest dreams. Sign up now to get started.</h1>
+        <h1 class="desc">You know you want to.</h1>
+      </div>
+
+      <form action="">
+        <h1 class="form-title">Let's do this!</h1>
+        <div class="form-row">
+          <div class="form-item">
+            <h2 class="form-label">first name</h2>
+            <input type="text" size="25" placeholder="" required>
+          </div>
+          <div class="form-item">
+            <h2 class="form-label">last name</h2>
+            <input type="text" size="25" placeholder="" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-item">
+            <h2 class="form-label">Email</h2>
+            <input type="email" size="25" placeholder="" required>
+          </div>
+          <div class="form-item">
+            <h2 class="form-label">Phone number</h2>
+            <input type="text" size="25" placeholder="" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-item">
+            <h2 class="form-label">Password</h2>
+            <input id="password" class="" type="text" size="25" placeholder="" required>
+            <div class="alert-desc">*Password do not match</div>
+          </div>
+          <div class="form-item">
+            <h2 class="form-label">Confirm password</h2>
+            <input id="rpassword" class="" type="password" size="25" placeholder="" required>
+          </div>
+        </div>
+      </form>
+      <div class="form-bottom">
+        <div class="btn">Create Account</div>
+        <h2>Already have account? <a href="#">Log in</a></h2>
+      </div>
+    </div>
+  </main>
+</body>
+<script>
+  const button = document.querySelector('.btn')
+  const inputPassword = document.querySelector('#password')
+  const inputRPassword = document.querySelector('#rpassword')
+  const alertDesc = document.querySelector('.alert-desc')
+  button.addEventListener('click', (e) => {
+    var password = document.getElementById('password').value
+    var rpassword = document.getElementById('rpassword').value
+    console.log(password);
+    console.log(rpassword);
+    if (password !== rpassword) {
+      inputPassword.classList.add('alert')
+      inputRPassword.classList.add('alert')
+      alertDesc.classList.add('show')
+    }
+    else {
+      inputPassword.classList.remove('alert')
+      inputRPassword.classList.remove('alert')
+      alertDesc.classList.remove('show')
+    }
+
+  })
+
+</script>
+
+</html>
