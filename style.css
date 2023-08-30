@@ -28,10 +28,16 @@ button {
   border: 0;
 }
 body {
-  min-height: 100vh;
+  min-height: 100%;
   font-weight: 400;
   font-size: 16px;
   line-height: 1;
+  overflow-y: hidden;
+}
+
+a {
+  /* text-decoration: none; */
+  color: white
 }
 
 main {
@@ -157,6 +163,18 @@ form {
   text-transform: uppercase;
 }
 
+.left-section .sign-up-desc {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .right-section .form-bottom .btn {
   background-color: #596D48;
   padding: 15px 25px;
@@ -177,7 +195,6 @@ form {
 }
 
 .right-section .form-bottom a {
-  text-decoration: none;
   color: #596D48;
   font-weight: 550;
 }
